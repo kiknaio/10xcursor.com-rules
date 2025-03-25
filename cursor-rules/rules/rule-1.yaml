@@ -1,0 +1,91 @@
+id: kiknaio-nextjs-development-rules
+name: George Kiknadze's Next.js Development Rules
+description: Rules for Next.js development
+author:
+  name: George Kiknadze
+  twitter: https://twitter.com/kiknaio
+  github: https://github.com/kiknaio
+tags:
+  - nextjs
+  - typescript
+  - zod
+  - hooks
+  - NextAuth
+created: "2025-03-10"
+updated: "2025-03-20"
+rule: |
+  # Next.js Development Rules
+
+  ## Core Architecture Principles
+  - Use a clean, minimalist coding style for all interface components
+  - Prefer server components by default; only use `'use client'` when absolutely necessary
+  - Utilize server actions for data mutations instead of creating unnecessary API endpoints
+  - Create dedicated API endpoints only when required (e.g., for webhooks, third-party integrations)
+  - Always use TypeScript and add proper typing for all components, functions and variables
+  - Structure the project using the App Router pattern for better organization
+
+  ## Component Development
+  - Prefer functional components over class components in all cases
+  - Implement atomic design principles (atoms, molecules, organisms) for UI components
+  - Use `useState` and other hooks sparingly - prefer server-side state management when possible
+  - Break complex components into smaller, focused components
+  - Use meaningful component and file names that reflect their purpose
+  - Always destructure props for better readability
+
+  ## Performance & Optimization
+  - Implement proper loading states and error boundaries
+  - Use Next.js Image component (`next/image`) for all images to ensure optimization
+  - Implement code splitting with dynamic imports for large client components
+  - Use React Suspense for loading states in client components
+  - Optimize fonts with `next/font` to prevent layout shifts
+
+  ## SEO & Open Graph
+  - Create a reusable metadata configuration pattern for consistent SEO across pages
+  - Implement dynamic metadata for all pages using the metadata API
+  - Always include proper Open Graph tags for social media sharing (X, Facebook, LinkedIn)
+  - Ensure Open Graph images are properly sized (1200x630px recommended)
+  - Include specific meta tags for messenger platforms (WhatsApp, Telegram)
+  - Implement proper canonical URLs to avoid duplicate content issues
+  - Add structured data (JSON-LD) for enhanced search results when applicable
+
+  ## Code Organization & DRY Principles
+  - Implement utility functions in a dedicated `/utils` directory
+  - Create reusable hooks in a `/hooks` directory for shared client-side logic
+  - Use a `/lib` directory for shared server-side functions
+  - Don't create unnecessary abstractions - if a function is only used in one component, keep it there
+  - Use consistent naming conventions throughout the project
+  - Implement barrel exports (index.ts files) for cleaner imports
+
+  ## Styling Best Practices
+  - Use Tailwind CSS for styling components
+  - Never use @apply
+  - Avoid inline styles except for dynamic values. Use classnames for dynamic inline values
+  - Implement a consistent color scheme and spacing system
+  - Use responsive design patterns with mobile-first approach
+  - Implement dark mode support using Next.js theme capabilities if I ask
+
+  ## Data Fetching & State Management
+  - Use React Server Components for data fetching whenever possible
+  - Implement proper caching strategies with Next.js cache() function
+  - For client-side state, prefer React Context over complex state management libraries
+  - Use SWR or React Query for client-side data fetching when necessary
+  - Implement proper error handling for all data fetching operations
+
+  ## Authentication & Security
+  - Implement proper authentication with NextAuth.js or similar tools
+  - Use middleware for protected routes
+  - Never expose sensitive information in client components
+  - Implement proper CSRF protection
+  - Use environment variables for all sensitive configuration
+
+  ## Third-party services and utilities
+  - Use resend always to manage Emails (Subscription or Sending)
+  - Use zod for all data validation
+  - Use zod for environment variables validation
+  - Create .gitignore file and add all the files and folders that should not be tracked by git
+  - Always store environment variables in .env.local file
+  
+  ## Documentation
+  - Create a README with setup instructions
+  - Document API endpoints with clear request/response examples
+  - Keep a changelog for significant changes

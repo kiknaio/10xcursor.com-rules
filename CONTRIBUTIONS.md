@@ -7,7 +7,7 @@ Thank you for your interest in contributing to the 10xCursor.com Rules Directory
 ### Prerequisites
 
 - A GitHub account
-- Basic knowledge of JSON
+- Basic knowledge of YAML
 - Familiarity with Cursor editor and its rule system
 
 ### Fork and Clone
@@ -27,51 +27,50 @@ Thank you for your interest in contributing to the 10xCursor.com Rules Directory
 
 ### Step 1: Create Your Rule File
 
-1. Create a new JSON file in the `/rules` directory with a filename matching your rule ID:
+1. Create a new YAML file in the `/rules` directory with a filename rule-1.yaml, increment the number for each new rule:
    ```
-   rules/your-rule-id.json
+   rules/rule-1.yaml
    ```
 
 2. Use the following template for your rule:
-   ```json
-   {
-     "id": "your-rule-id",
-     "name": "Your Rule Name",
-     "description": "A clear description of what your rule does and its benefits",
-     "author": {
-       "name": "Your Name",
-       "twitter": "https://twitter.com/yourhandle",
-       "github": "https://github.com/yourusername"
-     },
-     "tags": ["relevant-tag", "another-tag"],
-     "created": "YYYY-MM-DD",
-     "rule": "// Your rule code here"
-   }
+   ```yaml
+   id: your-rule-id
+   name: Your Rule Name
+   description: A clear description of what your rule does and its benefits
+   author:
+     name: Your Name
+     twitter: https://twitter.com/yourhandle
+     github: https://github.com/yourusername
+   tags:
+     - relevant-tag
+     - another-tag
+   created: YYYY-MM-DD
+   rule: |
+     # Your rule code here
    ```
 
 3. Make sure to include comprehensive comments in your code to help others understand how it works.
 
 ### Step 2: Validate Your Rule
 
-1. Ensure your rule follows our [schema.json](schema.json) format
-2. Test your rule in your own Cursor installation to verify it works as expected
+1. Test your rule in your own Cursor installation to verify it works as expected
 
 ### Step 3: Submit a Pull Request
 
 1. Create a new branch for your rule:
    ```bash
-   git checkout -b add-rule/your-rule-id
+   git checkout -b add-rule/rule-1
    ```
 
 2. Commit your changes:
    ```bash
-   git add rules/your-rule-id.json
+   git add rules/rule-1.yaml
    git commit -m "Add rule: Your Rule Name"
    ```
 
 3. Push to your fork:
    ```bash
-   git push origin add-rule/your-rule-id
+   git push origin add-rule/rule-1
    ```
 
 4. Open a pull request from your fork to the main repository

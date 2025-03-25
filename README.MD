@@ -11,11 +11,10 @@ Cursor rules are customizations that extend the functionality of the Cursor edit
 ```
 /cursor-rules
   /rules             # Individual rule files
-    rule1.json
-    rule2.json
+    rule1.yaml
+    rule2.yaml
     ...
   rules-index.json   # Index of all available rules
-  schema.json        # JSON schema for rule validation
   README.md          # What you're reading right now
   CONTRIBUTING.md    # Guide for contributors
 ```
@@ -60,25 +59,29 @@ We welcome contributions from the community! Please see [CONTRIBUTING.md](CONTRI
 
 ## Rule Schema
 
-Each rule follows a standardized JSON schema to ensure consistency. Here's a simplified version:
+Each rule follows a standardized YAML format to ensure consistency. Here's an example of a rule:
 
-```json
-{
-  "id": "unique-rule-id",
-  "name": "Human-Readable Rule Name",
-  "description": "What this rule does and why it's useful",
-  "author": {
-    "name": "Your Name",
-    "twitter": "https://twitter.com/yourhandle",
-    "github": "https://github.com/yourusername"
-  },
-  "tags": ["category1", "category2"],
-  "created": "2025-03-20",
-  "rule": "// The actual rule code here"
-}
+```yaml
+id: kiknaio-nextjs-development-rules
+name: George Kiknadze's Next.js Development Rules
+description: Rules for Next.js development
+author:
+  name: George Kiknadze
+  twitter: https://twitter.com/kiknaio
+  github: https://github.com/kiknaio
+tags:
+  - nextjs
+  - typescript
+  - zod
+  - hooks
+  - NextAuth
+created: "2025-03-10"
+updated: "2025-03-20"
+rule: |
+  # Next.js Development Rules
+
+  ## Core Architecture Principles
 ```
-
-For the complete schema, see [schema.json](schema.json).
 
 ## License
 

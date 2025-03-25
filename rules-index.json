@@ -1,0 +1,16 @@
+{
+  "lastUpdated": "2025-03-25T13:30:00Z",
+  "totalRules": 1,
+  "rules": [
+    {
+      "id": "kiknaio-nextjs-development-rules",
+      "url": "https://github.com/kiknaio/10xcursor.com-rules/blob/main/cursor-rules/rules/rule-1.yaml",
+      "name": "George Kiknadze's Next.js Development Rules",
+      "description": "Rules for Next.js development",
+      "author": "George Kiknadze",
+      "tags": ["nextjs", "typescript", "zod", "hooks", "prettier"],
+      "created": "2025-03-10",
+      "updated": "2025-03-25"
+    }
+  ]
+}
